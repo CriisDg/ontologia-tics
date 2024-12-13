@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/chess#"
+     xml:base="http://www.semanticweb.org/chess"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/chess"/>
+
+    <!-- Clases principales -->
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Pieza"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Tablero"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Movimiento"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Jugador"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Reglas"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Estrategia"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Partida"/>
+
+    <!-- Subclases de Piezas -->
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Peon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Torre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Caballo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Alfil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Reina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Rey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+    </owl:Class>
+
+    <!-- Subclases de Tablero -->
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Casilla"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#CasillaBlanca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Casilla"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#CasillaNegra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Casilla"/>
+    </owl:Class>
+
+    <!-- Subclases de Movimiento -->
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#MovimientoPermitido">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Movimiento"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Enroque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Movimiento"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Coronacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Movimiento"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Jaque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Movimiento"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#JaqueMate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Movimiento"/>
+    </owl:Class>
+
+    <!-- Subclases de Estrategias -->
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#Apertura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Estrategia"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#AperturaItaliana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Apertura"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#DefensaSiciliana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Apertura"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/chess#GambitoDeRey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/chess#Apertura"/>
+    </owl:Class>
+
+    <!-- Propiedades -->
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chess#ubicadoEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chess#Pieza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chess#Casilla"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chess#realizaMovimiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chess#Jugador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chess#Movimiento"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/chess#utilizaEstrategia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chess#Jugador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/chess#Estrategia"/>
+    </owl:ObjectProperty>
+
+    <!-- Individuos -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chess#ReyBlanco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chess#Rey"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chess#CasillaE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chess#CasillaBlanca"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chess#MovimientoEnroqueCorto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chess#Enroque"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/chess#AperturaItalianaEjemplo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/chess#AperturaItaliana"/>
+    </owl:NamedIndividual>
+</rdf:RDF>

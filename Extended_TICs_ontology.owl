@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tics#"
+     xml:base="http://www.semanticweb.org/tics"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tics"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tics#almacena -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tics#almacena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tics#Servidor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tics#GestionDeDatos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#conectadoA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tics#conectadoA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tics#RedesYComunicacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tics#Dispositivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#procesaGrandesVolumenesDeDatos -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tics#procesaGrandesVolumenesDeDatos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tics#BigData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tics#GestionDeDatos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#protegidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tics#protegidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tics#Servidor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tics#Ciberseguridad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tics#AlmacenamientoEnLaNube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#AlmacenamientoEnLaNube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Antivirus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Antivirus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Ciberseguridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Aplicacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Aplicacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#BaseDeDatos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#BaseDeDatos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#BaseNoRelacional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#BaseNoRelacional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#BaseDeDatos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#BaseRelacional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#BaseRelacional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#BaseDeDatos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#BigData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#BigData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#TendenciasEmergentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Blockchain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Blockchain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#TendenciasEmergentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Ciberseguridad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Ciberseguridad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Dispositivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Dispositivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#DispositivoMovil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#DispositivoMovil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Laptop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Firewall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Firewall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Ciberseguridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#GestionDeDatos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#GestionDeDatos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Hardware"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#InternetDeLasCosas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#InternetDeLasCosas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#TendenciasEmergentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Laptop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Laptop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#RedesYComunicacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#RedesYComunicacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Servidor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Servidor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#ServidorEnLaNube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#ServidorEnLaNube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Servidor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#SistemaDeAutenticacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#SistemaDeAutenticacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Ciberseguridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#SistemaOperativo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#SistemaOperativo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tics#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#Software"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#TendenciasEmergentes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tics#TendenciasEmergentes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tics#BaseRelacionalMySQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tics#BaseRelacionalMySQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tics#BaseRelacional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#FirewallNorton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tics#FirewallNorton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tics#Firewall"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#ServidorAWS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tics#ServidorAWS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tics#ServidorEnLaNube"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tics#Spark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tics#Spark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tics#BigData"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
